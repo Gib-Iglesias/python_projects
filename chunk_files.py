@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Configurar los datos en el archivo para iterar cada X líneas
-reader = pd.read_table(r'/Users/UsuarioRappi/Downloads/BorrarProdcuts.csv',
+reader = pd.read_table(r'./Downloads/BorrarProducts.csv',
                     header=None, sep='\n', chunksize=5000, iterator=True)
 
 # Archivo de guardado iterativo
