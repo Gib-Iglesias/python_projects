@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 def palindromo(sentencia):
+
     """
     Permite conocer si un str es, o no, un palíndromo.
     Examples
@@ -14,5 +15,6 @@ def palindromo(sentencia):
     >>> palindromo('Gib Iglesias')
     False
     """
+
     sentencia = sentencia.lower().replace(' ','')
     return sentencia == sentencia[::-1]
