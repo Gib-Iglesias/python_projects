@@ -1,0 +1,51 @@
+Entrevista Ejemplo
+
+1A- ¿Como manejarías un millón de peticiones?
+1- Con un orquestador o de forma asyncrona, usando algún tópico de kafka que vaya enviando las peticiones por sección o dependiendo el llamado de donde se hizo.
+A- Me aseguraría que la BDD trabaje por poolings, que use un sistema de cache o respuestas prefabricadas que generen respuestas automáticas.
+
+
+2B- ¿Qué es un RESTfull API?
+2- RESTfull API es la metodología que se utiliza para generar APIs que usando el sistema CRUD te permite crear peticiones de cierto tipo, para manejar la base de datos e interactuar con ella(s)
+B- Es un estilo de arquitectura para crear una API, y una API es una interfaz del programa de aplicación que utiliza solicitudes HTTP para acceder a cada uno de esos endpoints, los más comunes son GET, POST, PUT, PATCH, DELETE, también gracias a los RestfullPAI podemos manejar CACHE y separarlos por diferentes capas, así como poder manejar servicios públicos o privados y también poder manejar tokens y autorizaciones que viajan en los Headers.
+
+
+3C- ¿Qué es GRAPHql y cómo se diferencia con el RESTfull API tradicional?
+3- GraphQL es una metodología de interacción con BDD no relacional, se diferencía en que Graphql es NO Relacional y la metodología sQL tradicional si es relacional entre sus bases y tablas de datos.
+C- Basicamente es un endpoint http y responde de la misma forma que una RESTfull API, el cambio está en que sólo responde exactamente con la información solicitada, a diferencia de un API tradicional que retorna todo el set de datos predefinido y no es posible cambiarlo al hacer la petición.
+
+
+4D- ¿Que es la Autorización y Autenticación y cómo se diferencían entre sí?
+4- Autenticacion es una forma de validar que la entidad que accede a un API es la entidad que dice serlo, la Autorizacion es un token, password o secret que valida el acceso de una entidad a una API, la diferencia radica en ....
+D- La Autenticación es el acto de identificar un usuario o dispositivo; la Autorización es el acto de permitir o denegar a un usuario en particular algún tipo de recurso solicitado y ese recurso se brinda acorde a su rol o privilegio otorgado.
+
+
+5E- ¿Cómo asegurarías la consistencia de la DATA en una aplicación?
+5- Usando Primary Keys o Foreign Keys que mantengan la consistencia de las tablas y sus datos dentro.
+E- Principalmente comenzaría revisando la base de datos y asegurarnos que guardemos datos de calidad y no permitamos que entre basura, por ejemplo podríamos verificar que cada columna tenga los constraints necesarios, verificar también que cada columna y la tabla tenga los checks de validación necesarios para permitir inserciones o actualizaciones de la data, crear enumeraciones y tablas asociadas para asegurar la integridad referencial, evitar la eliminación de registros y mejor ocultarlos con alguna bandera booleana, tener herramientas de validación en cada capa pero principalmente en el backing y la BDD, asegurar la privacidad y el acceso a la data.
+
+
+6F- ¿Puede hablar del manejo de CACHE que haya immplementado para mejorar el performance?
+6- Usando REDIS mejoramos el uso del cache, dejando que el cache no aumente ni alente los procesos sincronos.
+F- Dependiendo la capa donde se quiera implementar se puede mejorar separando dependencias.
+
+
+7G- ¿Como realizarías el testing en el backend?
+7- Usando tests unitarios podemos tener un mapeo casi completo del testing en el MS.
+G- Se pueden hacer de varias formas, Pruebas END-TO-END, o usar/levantar el backend en un área de stagging o usar software para pruebas de estrés como puppeteer o lauder.io.
+
+
+8H- ¿Cómo asegurarías almacenar información sensible en tus aplicaciones?
+8- Almacenar la data sensible de las applicaciones debería ser hecho por lo menos con un hasheo o un encriptado.
+H- Encriptar el disco duro y todos los dispositivos también, restringir el acceso.
+
+
+9I- ¿Cómo sugieres que hagamos los despliegues a producción de nuestra aplicación?
+9- Para hacer deploys a prod yo utilizaría siempre un area de stagging o dev donde levantar cada applicación o ms ahí y hacer tests end-to-end para garantizar que los parámetros y funciones están funcionando normal, también añadiría  job de CI/CD.
+I- Debería ser automatizado y versionado, el primer paso debería de generarse mediante un proceso automático desde el repositorio, el repo iniciaría la tarea de construcción; idealmente esto debería ser una integración continua, la construcción evalúa el testing automático end-to-end hasta que detecte algún error, ya que obviamente un error en el testing automático significaría que algún desarrollador o mi persona, hayamos hecho alguna modificación que impida una funcionalidad, si todo esto pasa sin errores se genera una imagen con un tag y nombre que también debería ser automático, con todo esto pasamos la aplicación al área de stagging para proseguir con pruebas de estrés, así como disparar la nueva versión a usuarios BETA que puedan probar la funcionalidad nueva; lo más importante es tener noción de lanzar una nueva versión probada y funcional para evitar caídas, en caos de tener un error en producción también es importante ser capaces de regresar a una versión anterior muy rápidamente
+
+
+10J- ¿Cómo manejarías los logs y errores de la aplicación?
+10- Manejaría los logs y errores en una tabla aparte o un tópico específico que guarde los errores ya predefinidos que podrían suceder, los errores que no estén definidos pondría una alerta cuando salga del parámetro deseado de su función.
+J- Primero preguntaría como lo hacen en la empresa actualmente para homogeneizar; si vamos empezando con estos logs, los haría de la forma estándar, en inglés y separar y centralizar los logs, planificar si deberíamos tener logs en tiempo real, categorizar en bloques los logs.
+

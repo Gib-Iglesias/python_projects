@@ -6,18 +6,14 @@ import random
 import re
 import sys
 
-#
-# Complete the 'foo' function below.
-#
+# Complete the 'simpleArraySum' function below.
 # The function is expected to return an INTEGER.
 # The function accepts following parameters:
 #  1. STRING_ARRAY codeList
 #  2. STRING_ARRAY shoppingCart
-#
 
-def foo(codeList, shoppingCart):
-    # Write your code here
-    return 'Hi'
+def simpleArraySum(codeList, shoppingCart):
+    pass
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
@@ -38,7 +34,7 @@ if __name__ == '__main__':
         shoppingCart_item = input()
         shoppingCart.append(shoppingCart_item)
 
-    result = foo(codeList, shoppingCart)
+    result = simpleArraySum(codeList, shoppingCart)
 
     fptr.write(str(result) + '\n')
 

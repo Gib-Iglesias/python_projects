@@ -23,3 +23,23 @@ def invertir_texto(texto):
     return invertido
 
 invertir_texto('abcdefghij.klm')
+
+
+# Palindromo en pagina de codigo (Hackerrank, Leetcode, etc)
+def solution(inputString):
+    splited = list(inputString)
+    inverted = splited[::-1]
+    str1 = ""
+    joined = str1.join(inverted)
+    return (joined == inputString)
+
+
+# Dada una cadena de texto (str), invertirlo sin usar métodos propios del LP
+def invertir_sm(texto):
+    textoi = ''
+    for letra in texto:
+        textoi = letra + textoi
+        print('Texto I: ', textoi)
+    return textoi
+
+invertir_sm('holaa')

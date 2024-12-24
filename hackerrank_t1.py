@@ -5,6 +5,7 @@ def searchSuggestions(repository, customerQuery):
 
     for i in repository:
         if customerQuery == repository[i]:
+            return i
 
 
 if __name__ == "__main__" :
