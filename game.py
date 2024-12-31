@@ -115,16 +115,18 @@ def run():
 
         if "_" not in spaces:
             os.system("clear")
-            print("Palabra: ",word)
-            print("Felicidades encontraste la palabra oculta y salvaste a tu monito")
-            print("¡¡¡ Ganaste !!!")
+            print("Palabra Oculta: ",word)
+            print("¡¡¡¡¡ Felicidades !!!!!")
+            print("¡¡¡ Encontraste la palabra oculta y salvaste a tu personita !!!")
+            print("¡¡¡¡¡ Ganaste !!!!!")
             break
             input()
 
         if attemps == 0:
             os.system("clear")
-            print("Palabra: ",word)
-            print("¡ Perdiste :( !")
+            print("Palabra Oculta: ",word)
+            print("¡ Lo siento Perdiste :( !")
+            print("¡¡¡ No Encontraste la palabra oculta y tu personita fué ahorcada")
             break
             input()
 

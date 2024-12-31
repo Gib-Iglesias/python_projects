@@ -2,7 +2,7 @@
 
 
 def run():
-    year = input('Ingresa el year: ') #el year que queremos comprobar
+    year = input('Ingresa el year: ') #año que queremos comprobar
     year = int(year)
     if year % 4 != 0: #no divisible entre 4
         print("No es bisiesto")

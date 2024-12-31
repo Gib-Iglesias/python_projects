@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
     # Example Input: 71564
     # Example Output: 5
-    prices = list(input('Ingresa una Lista de Numeros: '))
+    prices = list(input('Ingresa una lista de números: '))
     prices = list(map(int, prices))
     n = len(prices)
     max_profit = maxProfit(prices, n)
