@@ -1,0 +1,33 @@
+## Python - Django Project Run
+
+
+Create VENV:
+python3 -m venv venv
+
+Activate VENV:
+source venv/bin/activate (Mac / Linux)
+. venv\Scripts\activate (Windows)
+
+Deactivate VENV:
+deactivate (inside a venv)
+
+Install Requirements
+pip3 install -r requirements.txt
+
+Check List of Requirements Installed
+pip3 freeze name.txt
+
+Migrations
+python manage.py makemigrations
+python manage.py makemigrations [app_name]
+python manage.py migrate
+
+Create Super User (Django-Admin)
+python manage.py createsuperuser
+
+Runserver
+python manage.py runserver
+python manage.py runserver [run in specific URL: 0.0.0.0:8000]
+
+To Run Tests
+python manage.py test
