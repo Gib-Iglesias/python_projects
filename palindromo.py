@@ -22,16 +22,18 @@ def invertir_texto(texto):
     print('texto_invertido: ',invertido)
     return invertido
 
-invertir_texto('abcdefghij.klm')
+invertir_texto(input('Escribe una palabra a invertir: '))
 
 
 # Palindromo en pagina de codigo (Hackerrank, Leetcode, etc)
-def solution(inputString):
-    splited = list(inputString)
+def solution(input_string):
+    splited = list(input_string)
     inverted = splited[::-1]
     str1 = ""
     joined = str1.join(inverted)
-    return (joined == inputString)
+    return (joined == input_string)
+
+print(solution(input('Escribe una palabra para revisar si es un Palindromo: ')))
 
 
 # Dada una cadena de texto (str), invertirlo sin usar métodos propios del LP
@@ -39,7 +41,7 @@ def invertir_sm(texto):
     textoi = ''
     for letra in texto:
         textoi = letra + textoi
-        print('Texto I: ', textoi)
+    print('Texto I: ', textoi)
     return textoi
 
-invertir_sm('holaa')
+invertir_sm(input('Escribe una palabra: '))
