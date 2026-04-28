@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
+
 import random
+
 
 def run():
     numerorandom = random.randint(1, 100)

@@ -3,7 +3,8 @@ import random
 import string
 
 
-#Gibran´s Final Code
+# Gibran´s Code
+# Final Version
 def get_password(length, types):
     characters = ""
     if "numbers" in types:
